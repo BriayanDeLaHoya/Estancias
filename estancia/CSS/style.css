@@ -1,0 +1,154 @@
+/***********************
+En GitHub Pages: https://alebarbaja.github.io/volver-a-empezar/
+************************/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Days One', sans-serif;
+}
+
+.volver, .a, .empezar {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+
+.volver {
+  background-color: salmon;
+}
+
+.a {
+  background-color: deepskyblue;
+}
+
+.empezar {
+  background-color: gray;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  position: fixed;
+  right: 0;
+}
+
+ul i {
+  padding: 0;
+  margin-right: 0.3em;
+  padding-right: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 1em 0;
+}
+
+i {
+  padding: 1em;
+}
+
+.fa-bars {
+  transition: all .2s;
+}
+
+.fa-bars:hover {
+  color: white;
+}
+
+.nav {
+  font-family: 'Roboto', sans-serif;
+  background-color: #EAEFBD;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav:not(:target) {
+  right: -100%;
+  transition: right 1.5s;
+}
+
+.nav:target {
+  right: 0;
+  transition: right 1s;
+}
+
+#close-nav:not(:target) {
+  right: -100%;
+  transition: right 1.5s;
+}
+
+#close-nav:target {
+  right: 0;
+  transition: all 1s;
+}
+
+#close-nav:not(:target) {
+  right: 0;
+  transform: rotate(360deg);
+}
+
+.nav a {
+  border-bottom: 2px solid transparent;
+  transition: all .2s ease-in-out;
+}
+
+.nav a:not(.close):hover {
+  border-bottom: 2px solid;
+}
+
+.fa-heart {
+  font-size: 1.5em;
+  transition: all .1s ease-in-out;
+}
+
+.fa-heart:hover {
+  color: #ee6a6a;
+  animation: pulse 1s infinite;
+}
+
+/* KEYFRAMES */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 56em) {
+	.volver,
+	.a,
+	.empezar {
+		font-size: 5em;
+	}
+}
